@@ -3,7 +3,7 @@ import Iotanimation from "./Animations/Iotanimation.jsx";
 const LandingPage = () => {
   return (
     <div>
-      <div className="bg1">
+      <div className="bg-bg1">
         <div className="relative overflow-hidden">
           <div className="absolute blur-3xl opacity-[30%] bg-gradient-to-tr from-[#1F34E7] to-[#1FC3E7] bg-gradient-to-r -top-[250px] -right-[250px] w-[700px] h-[700px] rounded-full"></div>
           <div className="absolute blur-3xl opacity-[30%] bg-gradient-to-tr from-[#1F34E7] to-[#1FC3E7] bg-gradient-to-r top-[800px] left-[350px] w-[200px] h-[200px] rounded-full"></div>
