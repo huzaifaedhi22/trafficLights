@@ -46,7 +46,7 @@ const LandingPage = () => {
               </div>
             </div>
           </div>
-          <div id="footer" className="w-[100%] h-[50px] mt-[220px] z-20">
+          <div id="footer" className="w-[100%] h-[50px] mt-[180px] z-20">
             <div className="flex justify-between  rounded-3xl ">
               <div className="text-white flex  text-xl justify-center gap-8 w-[100%] ">
                 <p>Taha </p>
