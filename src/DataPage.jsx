@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Graph1 from "./components/Graph1";
 import Graph2 from "./components/Graph2";
 import Graph3 from "./components/Graph3";
 
 const DataPage = () => {
   const [graph, setGraph] = useState("graph1");
+
+  const [data, setData] = useState();
 
   return (
     <div className="bg-bg1 h-screen">
@@ -17,11 +19,8 @@ const DataPage = () => {
             <div className="text-[#E2E6FA]">IOT Project</div>
           </div>
         </div>
-        {graph === "graph1" && <Graph1 />}
-        {graph === "graph2" && <Graph2 />}
-        {graph === "graph3" && <Graph3 />}
 
-        <div id="footer" className="w-[100%] h-[50px] mt-[50px] ">
+        <div id="change_graph" className="w-[100%] h-[50px] ">
           <div className="flex justify-between  rounded-3xl ">
             <div className="text-white flex  text-xl justify-center gap-8 w-[100%] ">
               <button
@@ -38,17 +37,24 @@ const DataPage = () => {
               >
                 Graph 2
               </button>
-              <button
-                onClick={() => {
-                  setGraph("graph3");
-                }}
-              >
-                Graph 3
-              </button>
             </div>
-            <div></div>
           </div>
         </div>
+        {graph === "graph1" && <Graph1 data={data} />}
+        {graph === "graph2" && <Graph2 data={data} />}
+
+        {/* <div className="text-white  flex justify-center mt-5">
+          <table className="border-2 w-[80%]">
+            <tr className="">
+              <th className="rounded-md w-[80%]">Time</th>
+              <th className="border-2 rounded-md">Status</th>
+            </tr>
+            <tr className="">
+              <td className="border-2">Alfreds Futterkiste</td>
+              <td>Maria Anders</td>
+            </tr>
+          </table>
+        </div> */}
       </div>
     </div>
   );

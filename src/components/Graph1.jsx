@@ -1,11 +1,21 @@
 import Plot from "react-plotly.js";
 
-import React from "react";
-const Graph1 = () => {
+import React, { useEffect } from "react";
+const Graph1 = ({ data }) => {
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch("http://localhost:3002/");
+      const data = await res.json();
+      console.log(data);
+      console.log(data[1]);
+    };
+    fetchData();
+    return () => {};
+  }, []);
   return (
-    <div className="flex justify-center mt-[50px]">
+    <div className="flex justify-center ">
       <Plot
-        data={[{ type: "bar", x: [1, 2, 3, 4, 5], y: [2, 5, 3, 9, 4] }]}
+        data={[{ type: "bar", x: [1, 2], y: [3, 5] }]}
         layout={{ width: 850, height: 600, title: "Traffic Lights" }}
       />
     </div>
