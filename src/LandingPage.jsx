@@ -25,10 +25,9 @@ const LandingPage = () => {
                 Traffic Lights{" "}
               </div>
               <div className="text-3xl text-[#E4EFFC]">IOT Project </div>
-              <div className="text-lg text-[#A5AAB9]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
-                dignissimos fugiat expedita ducimus ab, distinctio mollitia. A
-                illum molestias tenetur?
+              <div className="text-2xl text-[#A5AAB9]">
+                A Density based traffic control system to reduce waiting time on
+                traffic signals.
               </div>
               <div className="button text-white z-20">
                 <button
